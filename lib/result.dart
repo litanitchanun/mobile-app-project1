@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ResultPage extends StatelessWidget {
+class ResultPage extends StatelessWidget { //the result screen will be the order of selected persons
   const ResultPage({required this.result});
 
   final double result;

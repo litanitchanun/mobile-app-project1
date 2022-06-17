@@ -7,7 +7,7 @@ import 'package:project1/nameEntering.dart';
 import 'dart:convert';
 import 'colors.dart';
 
-class WheelPage extends StatefulWidget {
+class WheelPage extends StatefulWidget {// the page that the wheel is spinning
   final nameController;
   const WheelPage({required this.nameController});
   static var result;
@@ -33,7 +33,7 @@ class _HomePageState extends State<WheelPage>{
     super.dispose();
   }
 
-  List? convert(String input) {
+  List? convert(String input) { //convert from "name1 name2 name3 ..." to ["name1","name2","name3",....]
     List output;
     try {
       output = json.decode(input);
@@ -44,13 +44,13 @@ class _HomePageState extends State<WheelPage>{
     }
   }
 
-  List? removing(List<String> input, String toRemove){
+  List? removing(List<String> input, String toRemove){ // to remove the name from wheel
     var index = input.indexOf(toRemove);
     input.removeAt(index);
   }
 
   @override
-  void initState() {
+  void initState() { // to retrieve the name that is selected from the wheel
     _controller.stream.listen((value) {
       print('Value from controller: $value');
     });
@@ -133,3 +133,4 @@ class _HomePageState extends State<WheelPage>{
   }
 }
 
+//Reference: https://youtu.be/lP026rVIrfg

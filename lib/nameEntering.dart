@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/colors.dart';
 import 'package:project1/fortuneWheel.dart';
 
-class InsertNamePage extends StatelessWidget{
+class InsertNamePage extends StatelessWidget{ //the page that let user to insert name to be on the wheel
   static var allNames;
   @override
   Widget build(BuildContext context){
